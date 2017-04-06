@@ -41,6 +41,10 @@ dependencies {
      */
     compile 'com.android.support:appcompat-v7:25.0.0'
     /**
+     * 检测数据库表的工具库
+     */
+    compile 'com.amitshekhar.android:debug-db:1.0.0'
+    /**
      *
      */
     compile 'de.greenrobot:greendao:2.1.0'

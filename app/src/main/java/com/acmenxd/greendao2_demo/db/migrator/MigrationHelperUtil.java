@@ -58,6 +58,21 @@ public class MigrationHelperUtil {
      * @param daoClasses
      */
     public void migrate(SQLiteDatabase db, Class<? extends AbstractDao<?, ?>>... daoClasses) {
+        // 检查表是否存在,如果不存在则创建
+        for (int i = 0; i < daoClasses.length; i++) {
+            try {
+                Method method = daoClasses[i].getMethod("createTable", SQLiteDatabase.class, boolean.class);
+                try {
+                    method.invoke(null, db, true);
+                } catch (IllegalAccessException pE) {
+                    pE.printStackTrace();
+                } catch (InvocationTargetException pE) {
+                    pE.printStackTrace();
+                }
+            } catch (NoSuchMethodException pE) {
+                pE.printStackTrace();
+            }
+        }
         //新建临时表
         generateTempTables(db, daoClasses);
         //删除表
