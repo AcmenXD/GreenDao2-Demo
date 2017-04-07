@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.acmenxd.greendao2_demo.db.DBUtil;
+import com.acmenxd.greendao2_demo.db.StudentDB;
 import com.acmenxd.greendao2_demo.db.bean.Student;
 import com.acmenxd.greendao2_demo.db.dao.StudentDao;
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tDate;
     private ListView lv;
     private MyAdapter mMyAdapter;
-    private DBUtil mDBUtil;
+    private StudentDB mDBUtil;
     private Cursor mCursor;
 
     @Override
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.lv);
 
         //读取数据
-        mDBUtil = DBUtil.getInstance();
+        mDBUtil = StudentDB.getInstance();
         mCursor = mDBUtil.getStudentCursor();
         //设置数据视图
         mMyAdapter = new MyAdapter(this, mCursor);

@@ -18,21 +18,21 @@ import de.greenrobot.dao.query.Query;
  * @date 2016/11/21 16:22
  * @detail something
  */
-public class DBUtil {
-    private static DBUtil instance;
+public class StudentDB {
+    private static StudentDB instance;
     private SQLiteDatabase db;
     private DaoSession ds;
     private StudentDao mStudentDao;
 
-    private DBUtil() {
+    private StudentDB() {
         db = DBManager.getInstance().getDatabase();
         ds = DBManager.getInstance().getDaoSession();
         mStudentDao = ds.getStudentDao();
     }
 
-    public static DBUtil getInstance() {
+    public static StudentDB getInstance() {
         if (instance == null) {
-            instance = new DBUtil();
+            instance = new StudentDB();
         }
         return instance;
     }

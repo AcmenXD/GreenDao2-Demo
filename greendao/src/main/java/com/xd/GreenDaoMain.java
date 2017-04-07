@@ -8,12 +8,12 @@ import de.greenrobot.daogenerator.Schema;
  * @author 小东
  * @version v1.0
  * @date 2016/11/21 14:16
- * @detail GeneratorBase
+ * @detail GreenDaoMain
  */
-public class GeneratorBase {
+public class GreenDaoMain {
     /**
      * 数据库版本号不能降低,会导致App无法安装
-     * 数据库字段发生变更时,更新这个版本号,运行main
+     * 数据库字段发生变更或新增表时,更新这个版本号,运行main
      * 版本号历史:
      * 1:2016年11月21日13:32:33 - > 创建初始库和表
      */
@@ -35,7 +35,7 @@ public class GeneratorBase {
         //schema.enableActiveEntitiesByDefault();
         //schema.enableKeepSectionsByDefault();
 
-        //添加实体
+        //添加实体 -> 对应数据库中的表
         addEntitys(schema);
 
         //自动生成代码到outDIR目录下
