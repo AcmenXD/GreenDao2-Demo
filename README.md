@@ -37,7 +37,7 @@
 ```
 ---
 **第二步**
-- 新建的Module中新建GreenDaoMain.java, 并参考Demo中的<a href="https://github.com/AcmenXD/GreenDao2-Demo/blob/master/greendao/src/main/java/com/xd/GeneratorBase.java">GreenDaoMain.java</a>做相关配置(参考类中注释写的很详细)
+- 新建的Module中新建GreenDaoMain.java, 并参考Demo中的<a href="https://github.com/AcmenXD/GreenDao2-Demo/blob/master/greendao/src/main/java/com/xd/GreenDaoMain.java">GreenDaoMain.java</a>做相关配置(参考类中注释写的很详细)
 - 配置完成后,运行GreenDaoMain.java中的main函数,会自动生成部分代码和java文件(如运行失败,修复问题后,需再次运行)
 ---
 **第三步**
