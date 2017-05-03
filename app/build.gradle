@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.acmenxd.greendao2_demo"
-        minSdkVersion 19
+        minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -45,7 +45,7 @@ dependencies {
      */
     compile 'com.amitshekhar.android:debug-db:1.0.0'
     /**
-     *
+     * GreenDao
      */
     compile 'de.greenrobot:greendao:2.1.0'
 }
